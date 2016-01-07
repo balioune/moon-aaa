@@ -68,7 +68,9 @@ public class IdmLightProxy implements CredentialAuth<PasswordCredentials>,
             synchronized (claimCache) {
                 claim = cache.get(creds);
                 if (claim == null) {
-                    claim = dbAuthenticate(creds, domainName);
+                    //claim = dbAuthenticate(creds, domainName);
+                	//for moon authentication
+                    claim = moonAuthenticate(creds.username(), creds.password(), domainName);
                     if (claim != null) {
                         cache.put(creds, claim);
                     }
@@ -83,6 +85,17 @@ public class IdmLightProxy implements CredentialAuth<PasswordCredentials>,
             cache.clear();
         }
     }
+    
+    //for moon
+    private static Claim moonAuthenticate(String userName, String password, String domainName) {
+    	
+    	 Claim claim = null;
+    	 
+    	 ClaimBuilder cb = new ClaimBuilder();
+         claim = cb.build(userName, password, domainName);
+         
+         return claim;
+    }    
 
     private static Claim dbAuthenticate(PasswordCredentials creds, String domainName) {
         Domain domain=null;

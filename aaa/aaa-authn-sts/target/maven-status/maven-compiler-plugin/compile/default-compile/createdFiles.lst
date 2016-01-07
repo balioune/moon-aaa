@@ -1,0 +1,8 @@
+org/opendaylight/aaa/sts/AnonymousRefreshTokenValidator.class
+org/opendaylight/aaa/sts/TokenEndpoint.class
+org/opendaylight/aaa/sts/Activator.class
+org/opendaylight/aaa/sts/TokenAuthFilter$UnauthorizedException.class
+org/opendaylight/aaa/sts/OAuthRequest.class
+org/opendaylight/aaa/sts/ServiceLocator.class
+org/opendaylight/aaa/sts/AnonymousPasswordValidator.class
+org/opendaylight/aaa/sts/TokenAuthFilter.class

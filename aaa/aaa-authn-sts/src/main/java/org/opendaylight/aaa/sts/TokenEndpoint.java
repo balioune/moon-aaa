@@ -146,6 +146,7 @@ public class TokenEndpoint extends HttpServlet {
             if (!oauthRequest.getScopes().isEmpty()) {
                 String domain = oauthRequest.getScopes().iterator().next();
                 claim = ServiceLocator.INSTANCE.da.authenticate(pc, domain);
+                System.out.print("TokenEndPoint: "+ claim.toString());
             }
         } else if (oauthRequest.getParam(OAuth.OAUTH_GRANT_TYPE).equals(
                 GrantType.REFRESH_TOKEN.toString())) {
@@ -187,7 +188,11 @@ public class TokenEndpoint extends HttpServlet {
         if (claim == null) {
             throw new AuthenticationException(UNAUTHORIZED);
         }
-        String token = oi.accessToken();
+        
+        String getToString = claim.toString();
+        String [] parts = getToString.split(" ");
+        String token = parts[parts.length-1];
+
 
         // Cache this token...
         Authentication auth = new AuthenticationBuilder(new ClaimBuilder(claim)

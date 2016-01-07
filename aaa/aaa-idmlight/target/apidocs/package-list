@@ -1,0 +1,5 @@
+org.opendaylight.aaa.idm
+org.opendaylight.aaa.idm.config
+org.opendaylight.aaa.idm.model
+org.opendaylight.aaa.idm.persistence
+org.opendaylight.aaa.idm.rest

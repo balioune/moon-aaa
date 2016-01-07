@@ -1,0 +1,5 @@
+org.opendaylight.aaa.authn.mdsal.store
+org.opendaylight.aaa.authn.mdsal.store.util
+org.opendaylight.yang.gen.v1.config.aaa.authn.mdsal.store.rev141031
+org.opendaylight.yang.gen.v1.config.aaa.authn.mdsal.store.rev141031.modules.module.configuration
+org.opendaylight.yang.gen.v1.config.aaa.authn.mdsal.store.rev141031.modules.module.configuration.aaa.authn.mdsal.store

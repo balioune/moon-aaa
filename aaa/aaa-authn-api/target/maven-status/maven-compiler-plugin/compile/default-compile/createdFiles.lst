@@ -1,0 +1,12 @@
+org/opendaylight/aaa/api/AuthenticationException.class
+org/opendaylight/aaa/api/Claim.class
+org/opendaylight/aaa/api/CredentialAuth.class
+org/opendaylight/aaa/api/ClientService.class
+org/opendaylight/aaa/api/IdMService.class
+org/opendaylight/aaa/api/Authentication.class
+org/opendaylight/aaa/api/PasswordCredentials.class
+org/opendaylight/aaa/api/ClaimAuth.class
+org/opendaylight/aaa/api/TokenAuth.class
+org/opendaylight/aaa/api/TokenStore.class
+org/opendaylight/aaa/api/Credentials.class
+org/opendaylight/aaa/api/AuthenticationService.class

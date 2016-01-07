@@ -1,0 +1,4 @@
+org/opendaylight/aaa/idm/persistence/UserStoreTest.class
+org/opendaylight/aaa/idm/persistence/GrantStoreTest.class
+org/opendaylight/aaa/idm/persistence/DomainStoreTest.class
+org/opendaylight/aaa/idm/persistence/RoleStoreTest.class

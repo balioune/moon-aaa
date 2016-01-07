@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="5.8">
+<file name="/home/alioune/moon/final/aaa/aaa-authn-sssd/src/main/java/org/opendaylight/aaa/sssd/Activator.java">
+<error line="2" severity="warning" message="Line does not match expected header line of &apos;^ \*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.header.RegexpHeaderCheck"/>
+<error line="20" severity="warning" message="method def throws at indentation level 12 not at correct indentation, 8" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="28" severity="warning" message="method def throws at indentation level 12 not at correct indentation, 8" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+</file>
+<file name="/home/alioune/moon/final/aaa/aaa-authn-sssd/src/main/java/org/opendaylight/aaa/sssd/SssdClaimAuth.java">
+<error line="5" severity="warning" message="Line does not match expected header line of &apos;^ \* terms of the Eclipse Public License v1.0 which accompanies this distribution,&apos;." source="com.puppycrawl.tools.checkstyle.checks.header.RegexpHeaderCheck"/>
+<error line="48" column="25" severity="warning" message="Parameter name &apos;c&apos; must match pattern &apos;^[a-z][a-z0-9][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
+<error line="205" column="8" severity="warning" message="Unused @throws tag for &apos;InvalidValueException&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+</file>
+</checkstyle>

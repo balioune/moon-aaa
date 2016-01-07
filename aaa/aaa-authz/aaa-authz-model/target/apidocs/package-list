@@ -1,0 +1,5 @@
+org.opendaylight.yang.gen.v1.urn.aaa.yang.authz.ds.rev140722
+org.opendaylight.yang.gen.v1.urn.aaa.yang.authz.ds.rev140722.additional.domain.authz
+org.opendaylight.yang.gen.v1.urn.aaa.yang.authz.ds.rev140722.authorization.grp
+org.opendaylight.yang.gen.v1.urn.aaa.yang.authz.ds.rev140722.domain.authorization
+org.opendaylight.yang.gen.v1.urn.aaa.yang.authz.ds.rev140722.domain.authorization.domains

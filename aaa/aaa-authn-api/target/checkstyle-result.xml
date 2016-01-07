@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="5.8">
+<file name="/home/alioune/moon/final/aaa/aaa-authn-api/src/main/java/org/opendaylight/aaa/api/Credentials.java">
+<error line="2" severity="warning" message="Line does not match expected header line of &apos;^ \*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.header.RegexpHeaderCheck"/>
+</file>
+<file name="/home/alioune/moon/final/aaa/aaa-authn-api/src/main/java/org/opendaylight/aaa/api/ClaimAuth.java">
+<error line="2" severity="warning" message="Line does not match expected header line of &apos;^ \*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.header.RegexpHeaderCheck"/>
+</file>
+<file name="/home/alioune/moon/final/aaa/aaa-authn-api/src/main/java/org/opendaylight/aaa/api/TokenAuth.java">
+<error line="2" severity="warning" message="Line does not match expected header line of &apos;^ \*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.header.RegexpHeaderCheck"/>
+<error line="36" severity="warning" message="method def throws at indentation level 12 not at correct indentation, 8" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+</file>
+<file name="/home/alioune/moon/final/aaa/aaa-authn-api/src/main/java/org/opendaylight/aaa/api/CredentialAuth.java">
+<error line="2" severity="warning" message="Line does not match expected header line of &apos;^ \*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.header.RegexpHeaderCheck"/>
+</file>
+<file name="/home/alioune/moon/final/aaa/aaa-authn-api/src/main/java/org/opendaylight/aaa/api/ClientService.java">
+<error line="2" severity="warning" message="Line does not match expected header line of &apos;^ \*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.header.RegexpHeaderCheck"/>
+<error line="19" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+</file>
+<file name="/home/alioune/moon/final/aaa/aaa-authn-api/src/main/java/org/opendaylight/aaa/api/IdMService.java">
+<error line="2" severity="warning" message="Line does not match expected header line of &apos;^ \*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.header.RegexpHeaderCheck"/>
+</file>
+<file name="/home/alioune/moon/final/aaa/aaa-authn-api/src/main/java/org/opendaylight/aaa/api/AuthenticationService.java">
+<error line="2" severity="warning" message="Line does not match expected header line of &apos;^ \*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.header.RegexpHeaderCheck"/>
+</file>
+<file name="/home/alioune/moon/final/aaa/aaa-authn-api/src/main/java/org/opendaylight/aaa/api/Claim.java">
+<error line="2" severity="warning" message="Line does not match expected header line of &apos;^ \*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.header.RegexpHeaderCheck"/>
+</file>
+<file name="/home/alioune/moon/final/aaa/aaa-authn-api/src/main/java/org/opendaylight/aaa/api/TokenStore.java">
+<error line="1" severity="warning" message="Line does not match expected header line of &apos;^/[*]+&apos;." source="com.puppycrawl.tools.checkstyle.checks.header.RegexpHeaderCheck"/>
+<error line="10" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="12" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="14" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="16" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+</file>
+<file name="/home/alioune/moon/final/aaa/aaa-authn-api/src/main/java/org/opendaylight/aaa/api/PasswordCredentials.java">
+<error line="2" severity="warning" message="Line does not match expected header line of &apos;^ \*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.header.RegexpHeaderCheck"/>
+<error line="15" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="16" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+</file>
+<file name="/home/alioune/moon/final/aaa/aaa-authn-api/src/main/java/org/opendaylight/aaa/api/AuthenticationException.java">
+<error line="2" severity="warning" message="Line does not match expected header line of &apos;^ \*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.header.RegexpHeaderCheck"/>
+<error line="20" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="24" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="28" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+</file>
+<file name="/home/alioune/moon/final/aaa/aaa-authn-api/src/main/java/org/opendaylight/aaa/api/Authentication.java">
+<error line="2" severity="warning" message="Line does not match expected header line of &apos;^ \*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.header.RegexpHeaderCheck"/>
+</file>
+</checkstyle>

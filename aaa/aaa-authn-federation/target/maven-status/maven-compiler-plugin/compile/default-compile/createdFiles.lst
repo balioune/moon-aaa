@@ -1,0 +1,7 @@
+org/opendaylight/aaa/federation/SssdFilter.class
+org/opendaylight/aaa/federation/Activator.class
+org/opendaylight/aaa/federation/FederationConfiguration.class
+org/opendaylight/aaa/federation/SssdHeadersRequest.class
+org/opendaylight/aaa/federation/ClaimAuthFilter.class
+org/opendaylight/aaa/federation/FederationEndpoint.class
+org/opendaylight/aaa/federation/ServiceLocator.class
