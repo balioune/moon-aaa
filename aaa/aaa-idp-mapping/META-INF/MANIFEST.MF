@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1455532811576
+Build-Jdk: 1.7.0_85
+Built-By: root
+Bundle-Activator: org.opendaylight.aaa.idpmapping.Activator
+Bundle-ManifestVersion: 2
+Bundle-Name: aaa-authn-idpmapping
+Bundle-SymbolicName: org.opendaylight.aaa.authn-idpmapping
+Bundle-Version: 0.2.3.Lithium-SR3
+Created-By: Apache Maven Bundle Plugin
+Export-Package: org.opendaylight.aaa.idpmapping;uses:="org.apache.felix.
+ dm,org.osgi.framework";version="0.2.3"
+Import-Package: javax.json;version="[1.0,2)",javax.json.stream;version="
+ [1.0,2)",org.apache.felix.dm;version="[3.0,4)",org.osgi.framework;versi
+ on="[1.7,2)",org.slf4j;version="[1.7,2)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.7))"
+Tool: Bnd-2.3.0.201405100607
