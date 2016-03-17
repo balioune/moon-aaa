@@ -101,7 +101,8 @@
         <bundle>mvn:com.sun.jersey/jersey-servlet/{{VERSION}}</bundle>
         <bundle>mvn:com.sun.jersey/jersey-core/{{VERSION}}</bundle>
         <bundle>mvn:com.sun.jersey/jersey-server/{{VERSION}}</bundle>
-
+        <!-- alioune add -->
+        <bundle>mvn:com.sun.jersey/jersey-client/${jersey.version}</bundle>
         <!-- OSGi -->
         <bundle>mvn:org.apache.felix/org.apache.felix.dependencymanager/{{VERSION}}</bundle>
         <bundle>mvn:org.apache.felix/org.apache.felix.metatype/{{VERSION}}</bundle>

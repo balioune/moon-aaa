@@ -34,6 +34,17 @@
             <artifactId>jersey-server</artifactId>
             <scope>provided</scope>
         </dependency>
+        <!-- alioune add -->
+        <dependency>
+          <groupId>com.sun.jersey</groupId>
+          <artifactId>jersey-client</artifactId>
+          <scope>provided</scope>
+       </dependency>
+       <dependency>
+          <groupId>org.json</groupId>
+          <artifactId>json</artifactId>
+          <version>20140107</version>
+       </dependency>
         <dependency>
             <groupId>org.osgi</groupId>
             <artifactId>org.osgi.core</artifactId>

@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+
 import org.opendaylight.aaa.ClaimBuilder;
 import org.opendaylight.aaa.api.AuthenticationException;
 import org.opendaylight.aaa.api.Claim;
@@ -55,6 +56,7 @@ public class IdmLightProxy implements CredentialAuth<PasswordCredentials>, IdMSe
     }
 
     @Override
+    /**
     public Claim authenticate(PasswordCredentials creds) {
         Preconditions.checkNotNull(creds);
         Preconditions.checkNotNull(creds.username());
@@ -80,7 +82,17 @@ public class IdmLightProxy implements CredentialAuth<PasswordCredentials>, IdMSe
         }
         return claim;
     }
-
+    **/
+    public Claim authenticate(PasswordCredentials creds) {
+        Preconditions.checkNotNull(creds);
+        Preconditions.checkNotNull(creds.username());
+        Preconditions.checkNotNull(creds.password());
+        String domain = creds.domain() == null ? IIDMStore.DEFAULT_DOMAIN : creds.domain();
+        Claim claim = null;
+        ClaimBuilder cb = new ClaimBuilder();
+        claim = cb.build(creds.username(),creds.password(),domain);
+        return claim;
+    }
     /**
      * Clears the cache of any active claims.
      */

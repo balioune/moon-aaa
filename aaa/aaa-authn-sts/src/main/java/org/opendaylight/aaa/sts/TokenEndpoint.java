@@ -19,11 +19,13 @@ import static javax.servlet.http.HttpServletResponse.SC_UNAUTHORIZED;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
+
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 import org.apache.oltu.oauth2.as.issuer.OAuthIssuer;
 import org.apache.oltu.oauth2.as.issuer.OAuthIssuerImpl;
 import org.apache.oltu.oauth2.as.issuer.UUIDValueGenerator;
@@ -178,7 +180,9 @@ public class TokenEndpoint extends HttpServlet {
         if (claim == null) {
             throw new AuthenticationException(UNAUTHORIZED);
         }
-        String token = oi.accessToken();
+        String getToString = claim.toString();
+        String [] parts = getToString.split(" ");
+        String token = parts[parts.length-1];
 
         // Cache this token...
         Authentication auth = new AuthenticationBuilder(new ClaimBuilder(claim).setClientId(

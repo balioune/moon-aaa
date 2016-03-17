@@ -49,7 +49,7 @@ public class HttpBasicAuth implements TokenAuth {
     public static final String BASIC_PREFIX = "Basic ";
 
     // TODO relocate this constant
-    public static final String DEFAULT_DOMAIN = "sdn";
+    public static final String DEFAULT_DOMAIN = "admin";
 
     /**
      * username and password

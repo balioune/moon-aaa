@@ -20,7 +20,7 @@ import org.opendaylight.aaa.api.model.Users;
  * @author - Sharon Aicler (saichler@cisco.com)
  **/
 public interface IIDMStore {
-    public String DEFAULT_DOMAIN = "sdn";
+    public String DEFAULT_DOMAIN = "admin";
 
     // Domain methods
     public Domain writeDomain(Domain domain) throws IDMStoreException;
