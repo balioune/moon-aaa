@@ -1,0 +1,8 @@
+org/opendaylight/aaa/shiro/authorization/RBACRuleTest.class
+org/opendaylight/aaa/shiro/realm/ODLJndiLdapRealmTest.class
+org/opendaylight/aaa/shiro/realm/ODLJndiLdapRealmTest$TestNamingEnumeration.class
+org/opendaylight/aaa/shiro/web/env/KarafIniWebEnvironmentTest.class
+org/opendaylight/aaa/shiro/realm/TokenAuthRealmTest.class
+org/opendaylight/aaa/shiro/ServiceProxyTest.class
+org/opendaylight/aaa/shiro/realm/ODLJndiLdapRealmTest$TestPrincipalCollection.class
+org/opendaylight/aaa/shiro/authorization/DefaultRBACRulesTest.class

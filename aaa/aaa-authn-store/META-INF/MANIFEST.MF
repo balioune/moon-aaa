@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1462372626254
+Build-Jdk: 1.7.0_95
+Built-By: alioune
+Bundle-Activator: org.opendaylight.aaa.store.Activator
+Bundle-DocURL: https://www.opendaylight.org
+Bundle-License: https://www.eclipse.org/legal/epl-v10.html
+Bundle-ManifestVersion: 2
+Bundle-Name: aaa-authn-store
+Bundle-SymbolicName: org.opendaylight.aaa.authn-store
+Bundle-Vendor: OpenDaylight
+Bundle-Version: 0.3.1.Beryllium-SR1
+Created-By: Apache Maven Bundle Plugin
+Export-Package: org.opendaylight.aaa.store;uses:="org.apache.felix.dm,or
+ g.opendaylight.aaa.api,org.osgi.framework,org.osgi.service.cm";version=
+ "0.3.1"
+Import-Package: javax.management,net.sf.ehcache;version="[2.8,3)",net.sf
+ .ehcache.config;version="[2.8,3)",net.sf.ehcache.management;version="[2
+ .8,3)",org.apache.felix.dm;version="[3.0,4)",org.opendaylight.aaa.api;v
+ ersion="[0.3,1)",org.osgi.framework;version="[1.7,2)",org.osgi.service.
+ cm;version="[1.5,2)",org.slf4j;version="[1.7,2)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.7))"
+Tool: Bnd-3.0.0.201509101326

@@ -1,0 +1,7 @@
+org.opendaylight.aaa.shiro
+org.opendaylight.aaa.shiro.accounting
+org.opendaylight.aaa.shiro.authorization
+org.opendaylight.aaa.shiro.filters
+org.opendaylight.aaa.shiro.moon
+org.opendaylight.aaa.shiro.realm
+org.opendaylight.aaa.shiro.web.env
