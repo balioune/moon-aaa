@@ -17,23 +17,25 @@ This project is aimed at providing a flexible, pluggable framework with out-of-t
 
 Get the code:
 
-    git clone https://git.opendaylight.org/gerrit/aaa
+    clone the project with git
 
 Build it:
 
     cd aaa && mvn clean install -DskipTests
+
+### Export Moon information
+
+export MOON_SERVER_ADDR=192.168.105.135
+export MOON_SERVER_PORT=5000
+
 
 ### Installing
 
 AAA installs into an existing Opendaylight controller Karaf installation.  If you don't have an Opendaylight installation, please refer to this [page](https://wiki.opendaylight.org/view/OpenDaylight_Controller:Installation).
 
 Start the controller Karaf container:
-
+    cd distribution-karaf/target/assembly/
 	bin/karaf
-
-Install AAA repository from the Karaf shell:
-
-	repo-add mvn:org.opendaylight.aaa/features-aaa/0.1.0-SNAPSHOT/xml/features
 
 Install AAA AuthN features:
 
