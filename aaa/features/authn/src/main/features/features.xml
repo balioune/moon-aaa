@@ -28,6 +28,7 @@
         <bundle>mvn:com.sun.jersey/jersey-servlet/{{VERSION}}</bundle>
         <bundle>mvn:com.sun.jersey/jersey-core/{{VERSION}}</bundle>
         <bundle>mvn:com.sun.jersey/jersey-server/{{VERSION}}</bundle>
+        <bundle>mvn:com.sun.jersey/jersey-client/${jersey.version}</bundle>
 
         <!-- OSGi -->
         <bundle>mvn:org.apache.felix/org.apache.felix.dependencymanager/{{VERSION}}</bundle>
@@ -102,6 +103,7 @@
         <bundle>mvn:com.sun.jersey/jersey-servlet/{{VERSION}}</bundle>
         <bundle>mvn:com.sun.jersey/jersey-core/{{VERSION}}</bundle>
         <bundle>mvn:com.sun.jersey/jersey-server/{{VERSION}}</bundle>
+        <bundle>mvn:com.sun.jersey/jersey-client/${jersey.version}</bundle>
 
         <!-- OSGi -->
         <bundle>mvn:org.apache.felix/org.apache.felix.dependencymanager/{{VERSION}}</bundle>
@@ -217,6 +219,7 @@
         <bundle>mvn:com.sun.jersey/jersey-servlet/{{VERSION}}</bundle>
         <bundle>mvn:com.sun.jersey/jersey-core/{{VERSION}}</bundle>
         <bundle>mvn:com.sun.jersey/jersey-server/{{VERSION}}</bundle>
+        <bundle>mvn:com.sun.jersey/jersey-client/${jersey.version}</bundle>
 
         <configfile finalname="etc/opendaylight/karaf/08-authn-config.xml">mvn:org.opendaylight.aaa/aaa-authn-mdsal-config/{{VERSION}}/xml/config</configfile>
         <configfile finalname="/etc/org.opendaylight.aaa.authn.cfg">mvn:org.opendaylight.aaa/aaa-authn/{{VERSION}}/cfg/config</configfile>
