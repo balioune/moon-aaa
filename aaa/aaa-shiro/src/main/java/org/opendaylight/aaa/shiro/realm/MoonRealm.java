@@ -30,7 +30,11 @@ import org.json.JSONTokener;
 import org.opendaylight.aaa.shiro.moon.MoonPrincipal;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
+/**
+ * MoonRealm is a Shiro Realm that authenticates users from OPNFV/moon platform
+ * @author Alioune BA alioune.ba@orange.com
+ *
+ */
 public class MoonRealm extends AuthorizingRealm{
 
     private static final Logger LOG = LoggerFactory.getLogger(MoonRealm.class);

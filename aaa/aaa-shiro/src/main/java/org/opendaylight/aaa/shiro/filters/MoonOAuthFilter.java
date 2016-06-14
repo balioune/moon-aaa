@@ -40,7 +40,11 @@ import org.opendaylight.aaa.shiro.moon.MoonPrincipal;
 import org.opendaylight.aaa.sts.OAuthRequest;
 import org.opendaylight.aaa.sts.ServiceLocator;
 
-
+/**
+ * MoonOAuthFilter filters oauth1 requests form token based authentication
+ * @author Alioune BA alioune.ba@orange.com
+ *
+ */
 public class MoonOAuthFilter extends AuthenticatingFilter{
 
     private static final String DOMAIN_SCOPE_REQUIRED = "Domain scope required";
@@ -84,12 +88,7 @@ public class MoonOAuthFilter extends AuthenticatingFilter{
     }
 
     protected boolean executeLogin(ServletRequest request, ServletResponse response) throws Exception {
-        /**
-         * Here, we will call three functions depending on whether user wants to:
-         * create Token
-         * refresh token
-         * delete token
-         */
+
         HttpServletRequest req= (HttpServletRequest) request;
         HttpServletResponse resp = (HttpServletResponse) response;
         try {
@@ -108,9 +107,9 @@ public class MoonOAuthFilter extends AuthenticatingFilter{
                     return onLoginFailure(token, e, request, response);
                 }
             } else if (req.getServletPath().equals(TOKEN_REVOKE_ENDPOINT)) {
-                //deleteAccessToken(req, resp);
+                //TODO: deleteAccessToken(req, resp);
             } else if (req.getServletPath().equals(TOKEN_VALIDATE_ENDPOINT)) {
-                //validateToken(req, resp);
+                //TODO: validateToken(req, resp);
             }
         } catch (AuthenticationException e) {
             error(resp, SC_UNAUTHORIZED, e.getMessage());

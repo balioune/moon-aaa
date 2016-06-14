@@ -14,6 +14,11 @@ import java.util.Set;
 
 import org.opendaylight.aaa.api.Claim;
 
+/**
+ * MoonPrincipal contains all user's information returned by moon on successful authentication
+ * @author Alioune BA alioune.ba@orange.com
+ *
+ */
 public  class MoonPrincipal {
 
     private final String username;
