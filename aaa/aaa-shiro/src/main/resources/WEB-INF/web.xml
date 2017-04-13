@@ -8,7 +8,6 @@
         <servlet-class>org.opendaylight.aaa.shiro.moon.MoonTokenEndpoint</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
-
     <servlet-mapping>
         <servlet-name>MOON</servlet-name>
         <url-pattern>/token</url-pattern>

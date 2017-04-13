@@ -39,6 +39,8 @@ import org.opendaylight.aaa.api.Claim;
 import org.opendaylight.aaa.shiro.moon.MoonPrincipal;
 import org.opendaylight.aaa.sts.OAuthRequest;
 import org.opendaylight.aaa.sts.ServiceLocator;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * MoonOAuthFilter filters oauth1 requests form token based authentication
@@ -47,6 +49,7 @@ import org.opendaylight.aaa.sts.ServiceLocator;
  */
 public class MoonOAuthFilter extends AuthenticatingFilter{
 
+    private static final Logger LOG = LoggerFactory.getLogger(MoonOAuthFilter.class);
     private static final String DOMAIN_SCOPE_REQUIRED = "Domain scope required";
     private static final String NOT_IMPLEMENTED = "not_implemented";
     private static final String UNAUTHORIZED = "unauthorized";
@@ -76,8 +79,12 @@ public class MoonOAuthFilter extends AuthenticatingFilter{
         HttpServletResponse httpResponse= (HttpServletResponse) response;
         MoonPrincipal principal = (MoonPrincipal) subject.getPrincipals().getPrimaryPrincipal();
         Claim claim = principal.principalToClaim();
-        oauthAccessTokenResponse(httpResponse,claim,"",principal.getToken());
-        return true;
+        if (moonAuthZ(token, request)){
+            oauthAccessTokenResponse(httpResponse,claim,"",principal.getToken());
+            return true;
+        }
+
+        return false;
     }
 
     protected boolean onLoginFailure(AuthenticationToken token, AuthenticationException e,
@@ -102,6 +109,8 @@ public class MoonOAuthFilter extends AuthenticatingFilter{
                 try {
                     Subject subject = getSubject(request, response);
                     subject.login(token);
+                    // check the authZ process
+                    subject.hasRole("admin");
                     return onLoginSuccess(token, subject, request, response);
                 } catch (AuthenticationException e) {
                     return onLoginFailure(token, e, request, response);
@@ -181,6 +190,18 @@ public class MoonOAuthFilter extends AuthenticatingFilter{
         } catch (Exception e1) {
             // Nothing to do here
         }
+    }
+    protected boolean isAccessAllowed(ServletRequest request, ServletResponse response,
+            Object mappedValue) {
+        LOG.info("Try authZ");
+        return super.isAccessAllowed(request, response, mappedValue);
+    }
+
+    public boolean moonAuthZ(AuthenticationToken token, ServletRequest request){
+        HttpServletRequest req= (HttpServletRequest) request;
+        String url = req.getRequestURI();
+        String username = (String) token.getPrincipal();
+        return true;
     }
 
 }

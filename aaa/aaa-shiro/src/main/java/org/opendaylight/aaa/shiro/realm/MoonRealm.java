@@ -21,6 +21,7 @@ import org.apache.shiro.authc.AuthenticationInfo;
 import org.apache.shiro.authc.AuthenticationToken;
 import org.apache.shiro.authc.SimpleAuthenticationInfo;
 import org.apache.shiro.authc.UsernamePasswordToken;
+import org.apache.shiro.authz.AuthorizationException;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
@@ -39,11 +40,35 @@ public class MoonRealm extends AuthorizingRealm{
 
     private static final Logger LOG = LoggerFactory.getLogger(MoonRealm.class);
     @Override
-    protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection arg0) {
-        // TODO Auto-generated method stub
+    protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principals) {
+        LOG.info("Do MOON authZ in doGetAuthorizationInfo method ");
+        MoonPrincipal princ = (MoonPrincipal) principals.getPrimaryPrincipal();
+        moonAuthorization();
+        if (principals == null)
+            throw new AuthorizationException("PrincipalCollection was null, which should not happen");
         return null;
     }
 
+    public boolean moonAuthorization(){
+        String output = "";
+        boolean authZ=false;
+        ClientConfig config = new DefaultClientConfig();
+        Client client = Client.create(config);
+        JSONTokener tokener;
+        JSONObject object =null;
+        String URL = "http://192.168.108.34:38001/authz/12345/123456/234567/3456";
+        WebResource webResource = client.resource(URL);
+        String input = "";
+        ClientResponse response = webResource.type("application/json").get(ClientResponse.class);
+        output = response.getEntity(String.class);
+        tokener = new JSONTokener(output);
+        object = new JSONObject(tokener);
+        if (object.getBoolean("result")){
+            authZ = object.getBoolean("result");
+            return object.getBoolean("result");
+        }
+        return false;
+    }
     @Override
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authenticationToken) throws AuthenticationException {
         // TODO Auto-generated method stub
